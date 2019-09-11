@@ -31,6 +31,7 @@ GameObject.prototype.destroy = function() {
   * should inherit destroy() from GameObject's prototype
 */
 function CharacterStats(stats) {
+    GameObject.call(this, stats);
     this.healthPoints = stats.healthPoints;
 };
 
@@ -50,7 +51,7 @@ CharacterStats.prototype.takeDamage = function() {
   * should inherit takeDamage() from CharacterStats
 */
 function Humanoid(object) {
-    GameObject.call(this, object)
+    CharacterStats.call(this, object);
     this.team = object.team;
     this.weapons = object.weapons;
     this.language = object.language;
