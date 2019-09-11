@@ -11,17 +11,41 @@
 */
 
 // Principle 1
-
+    //--Window/Global Object Binding
 // code example for Window Binding
+    const video = {
+        title: 'interstellar',
+        play() {
+            console.log(this);
+        }
+    }
 
+    video.play();
 // Principle 2
-
+    //--Implicit Binding
 // code example for Implicit Binding
+    const video2 = {
+        title: 'interstellar',
+        play() {
+            console.log(this.title);
+        }
+    }
 
+    video2.play();
 // Principle 3
-
+    //--New binding
 // code example for New Binding
+    function Vcr(movie) {
+        this.title = movie,
+        this.play = function() {
+            console.log(this.title);
+        }
+    }
 
+    const blockbuster = new Vcr('step brothers');
+
+    blockbuster.play();
 // Principle 4
-
+    //--Explicit binding
 // code example for Explicit Binding
+    blockbuster.play.call('the prestige'); //??????????????????????????????????????
