@@ -7,7 +7,7 @@
   
   Each constructor function has unique properties and methods that are defined in their block comments below:
 */
-  
+
 /*
   === GameObject ===
   * createdAt
@@ -15,6 +15,12 @@
   * dimensions (These represent the character's size in the video game)
   * destroy() // prototype method that returns: `${this.name} was removed from the game.`
 */
+function GameObject(objectAttrs) {
+    this.name = objectAttrs.name;
+    this.dimensions = objectAttrs.dimensions;
+
+}
+GameObject.
 
 /*
   === CharacterStats ===
@@ -22,6 +28,10 @@
   * takeDamage() // prototype method -> returns the string '<object name> took damage.'
   * should inherit destroy() from GameObject's prototype
 */
+function GameObject(object) {
+    this.name = object.name;
+
+}
 
 /*
   === Humanoid (Having an appearance or character resembling that of a human.) ===
@@ -32,14 +42,18 @@
   * should inherit destroy() from GameObject through CharacterStats
   * should inherit takeDamage() from CharacterStats
 */
- 
+function GameObject(object) {
+    this.name = object.name;
+
+}
+
 /*
   * Inheritance chain: GameObject -> CharacterStats -> Humanoid
   * Instances of Humanoid should have all of the same properties as CharacterStats and GameObject.
   * Instances of CharacterStats should have all of the same properties as GameObject.
 */
 
-// Test you work by un-commenting these 3 objects and the list of console logs below:
+// Test your work by un-commenting these 3 objects and the list of console logs below:
 
 /*
   const mage = new Humanoid({
